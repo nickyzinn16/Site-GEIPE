@@ -2,11 +2,11 @@
     <head>
         <meta charset="utf-8">
         <title>Inserção Profissional - GEIPE</title>
-        <link rel="icon" type="image/png" href="./resources/images/logo-geipe.png">
-        <link rel="stylesheet" href="./styles/base.css">
-        <link rel="stylesheet" href="./styles/banner.css">
-        <link rel="stylesheet" href="./styles/insercao.css">
-        <link rel="stylesheet" href="./styles/footer.css">
+        <link rel="icon" type="image/png" href="../resources/images/logo-geipe.png">
+        <link rel="stylesheet" href="../styles/cliente/base.css">
+        <link rel="stylesheet" href="../styles/cliente/banner.css">
+        <link rel="stylesheet" href="../styles/cliente/insercao.css">
+        <link rel="stylesheet" href="../styles/cliente/footer.css">
         <script src="https://kit.fontawesome.com/35842701b4.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -15,7 +15,7 @@
                 <nav class="navbar">
                     <div class="logo">
                         <a href="index.html">
-                            <img alt="Logo GEIPE" src="./resources/images/logo-geipe.png" class="logoGeipe">
+                            <img alt="Logo GEIPE" src="../resources/images/logo-geipe.png" class="logoGeipe">
                         </a>
                     </div>
                     <div class="menu">
@@ -26,7 +26,15 @@
                             <li><a href="empreendedorismo.html">Empreendedorismo</a></li>
                             <li><a href="contactos.html">Contacta-nos</a></li>
                             <li><a href="blog.html">Blog</a></li>
-                            <li><a href="login.html" class="btn-login">Login</a></li>
+                            <li class="user-menu">
+                                <a href="#" class="user-icon">
+                                    <i class="fa-solid fa-user"></i>
+                                </a>
+                                <div class="sair-cliente">
+                                    <p class="user-name">Nome</p>
+                                    <a href="../index.html">Sair da conta</a>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -46,7 +54,7 @@
             <div class="cards">
                 <div class="card card-info">
                     <div class="card-logo">
-                        <img src="./resources/images/iefplogo.png" alt="Logo IEFP">
+                        <img src="../resources/images/iefplogo.png" alt="Logo IEFP">
                     </div>
                     <div class="card-conteudo">
                         <h3>IEFP</h3>
@@ -57,7 +65,7 @@
 
                 <div class="card card-info">
                     <div class="card-logo">
-                        <img src="./resources/images/kre+.jpg" alt="Logo KRE+">
+                        <img src="../resources/images/kre+.jpg" alt="Logo KRE+">
                     </div>
                     <div class="card-conteudo">
                         <h3>KRE+</h3>
@@ -72,7 +80,7 @@
             <div class="footer-container">
                 <div class="imagem-footer">
                     <a href="index.html">
-                        <img src="./resources/images/logo-geipe.png" alt="Logo GEIPE">
+                        <img src="../resources/images/logo-geipe.png" alt="Logo GEIPE">
                     </a>
                     <p>GEIPE EICM-GDC</p>
                 </div>
@@ -113,7 +121,7 @@
         </footer>
 
         <button id="btn-topo">↑</button>
-        <script src="./scripts/insercao.js"></script>
-        <script src="./scripts/botao.js"></script>
+        <script src="../scripts/insercao.js"></script>
+        <script src="../scripts/botao.js"></script>
     </body>
 </html>

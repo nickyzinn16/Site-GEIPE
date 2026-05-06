@@ -1,0 +1,50 @@
+/* Estilo geral do banner principal em "todas as paginas" */
+.banner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 55vh;
+    padding: 40px 80px;
+    color: lightgray;
+    margin-top: 60px;
+    background-image:
+        linear-gradient(rgba(10,44,102,0.85), rgba(10,44,102,0.85)),
+        url("../../resources/images/banner-geipe2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Define a largura máxima do conteúdo dentro do banner */
+.main-banner {
+    max-width: 600px;
+}
+
+/* Estilo do título dentro do banner */
+.main-banner h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+/* Estilo do texto dentro do banner */
+.main-banner p {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+/* Estilo do botão de candidatar a um estagio de um curso */
+.candidatura {
+    background-color: #ffc107;
+    color: #0a2c66;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+/* Efeito hover do botão de candidatar a um estagio */
+.candidatura:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+}
