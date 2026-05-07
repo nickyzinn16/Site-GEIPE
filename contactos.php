@@ -1,125 +1,52 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Contactos - GEIPE</title>
-        <link rel="icon" type="image/png" href="./resources/images/logo-geipe.png">
-        <link rel="stylesheet" href="./styles/base.css">
-        <link rel="stylesheet" href="./styles/banner.css">
-        <link rel="stylesheet" href="./styles/contactos.css">
-        <link rel="stylesheet" href="./styles/footer.css">
-        <script src="https://kit.fontawesome.com/35842701b4.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <div class="grid-container">
-            <header class="header">
-                <nav class="navbar">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img alt="Logo GEIPE" src="./resources/images/logo-geipe.png" class="logoGeipe">
-                        </a>
-                    </div>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="index.html">Início</a></li>
-                            <li><a href="estagios.html">Estágios</a></li>
-                            <li><a href="insercao.html">Inserção Profissional</a></li>
-                            <li><a href="empreendedorismo.html">Empreendedorismo</a></li>
-                            <li><a href="contactos.html" class="ativo">Contacta-nos</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="login.html" class="btn-login">Login</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
+<?php
+    $titulo = "Contactos - GEIPE";
+    $css = "contactos.css";
+    $paginaAtiva = "contactos";
 
-            <section class="banner">
-                <div class="main-banner">
-                    <h1>CONTACTOS - ENTRE EM CONTACTO</h1>
-                    <p>Ficou com alguma dúvida ou tem uma sugestão? Entre em contato conosco</p>
-                </div>
-            </section>
+    include 'php/header.php';
+?>
 
-            <section class="contact-area">
-                <div class="contact-text">
-                    <h2>ENVIE-NOS UMA MENSAGEM</h2>
-                    <p>Preencha o formulário abaixo e entraremos em contacto o mais breve possível.</p>
+<section class="banner">
+    <div class="main-banner">
+        <h1>CONTACTOS - ENTRE EM CONTACTO</h1>
+        <p>Ficou com alguma dúvida ou tem uma sugestão? Entre em contacto connosco</p>
+    </div>
+</section>
 
-                    <form action="./php/contacto.php" method="POST" class="contact-form">
-                        <label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+<section class="contact-area">
+    <div class="contact-text">
+        <h2>ENVIE-NOS UMA MENSAGEM</h2>
+        <p>Preencha o formulário abaixo e entraremos em contacto o mais breve possível.</p>
 
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Seu email" required>
+        <form action="./php/contacto.php" method="POST" class="contact-form">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
 
-                        <label for="assunto">Assunto</label>
-                        <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Seu email" required>
 
-                        <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem" required></textarea>
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem" required>
 
-                        <button type="submit">Enviar Mensagem</button>
-                    </form>
-                </div>
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem" required></textarea>
 
-                <div class="contact-image">
-                    <img src="resources/images/cont.png" alt="Contactos" usemap="#mapa-contactos">
-                </div>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </div>
 
-                <map name="mapa-contactos">
-                    <area shape="rect" coords="105,225,419,277" href="mailto:geipeicmgdcsv@email.com" alt="Email GEIPE">
-                    <area shape="rect" coords="101,295,455,356" href="mailto:eicmgdcmindelo@email.com" alt="Email Escola">
-                    <area shape="rect" coords="104,368,303,429" href="tel:+2321313" alt="Numero Escola">
-                    <area shape="rect" coords="104,447,388,501" href="https://www.google.com/maps/place/Escola+Industrial+e+Comercial+do+Mindelo+Guilherme+Dias+Chantre+-+EICM+GDC/@16.8922869,-24.9904061,17z/data=!4m15!1m8!3m7!1s0x94f1c027dae4739:0xd42ee4d7452e5ce5!2sEscola+Comercial+e+Industrial+do+Mindelo,+Av.+Dr.+Alberto+Leite+5,+Mindelo!3b1!8m2!3d16.8922869!4d-24.9904061!16s%2Fg%2F11vlrxl17q!3m5!1s0x94f1c026390f379:0x1fd20acc18d3338e!8m2!3d16.892506!4d-24.9901961!16s%2Fg%2F11c7sq9dkk?entry=ttu&g_ep=EgoyMDI2MDMyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" alt="Locaizacao Escola">
-                </map>
-            </section>
+    <div class="contact-image">
+        <img src="resources/images/cont.png" alt="Contactos" usemap="#mapa-contactos">
+    </div>
 
-        <footer class="footer">
+    <map name="mapa-contactos">
+        <area shape="rect" coords="105,225,419,277" href="mailto:geipeicmgdcsv@email.com" alt="Email GEIPE">
+        <area shape="rect" coords="101,295,455,356" href="mailto:eicmgdcmindelo@email.com" alt="Email Escola">
+        <area shape="rect" coords="104,368,303,429" href="tel:+2321313" alt="Número Escola">
+        <area shape="rect" coords="104,447,388,501" href="https://maps.google.com" target="_blank" alt="Localização Escola">
+    </map>
+</section>
 
-            <div class="footer-container">
-                <div class="imagem-footer">
-                    <a href="index.html">
-                        <img src="./resources/images/logo-geipe.png" alt="Logo GEIPE">
-                    </a>
-                    <p>GEIPE EICM-GDC</p>
-                </div>
+<script src="./scripts/contactos.js"></script>
 
-                <div class="info-uteis">
-                    <h4>INFORMAÇÕES ÚTEIS</h4>
-                    <ul>
-                        <li><a href="estagios.html">Como conseguir um estágio</a></li>
-                        <li><a href="insercao.html">Orientação vocacional</a></li>
-                        <li><a href="insercao.html">Inserção Profissional</a></li>
-                        <li><a href="perguntas.html">Perguntas frequentes (FAQ)</a></li>
-                    </ul>
-                </div>
-
-                <div class="endereco-contactos">
-                    <h4>ENDEREÇO & CONTACTOS</h4>
-                    <p><a href="https://www.google.com/maps/place/Escola+Industrial+e+Comercial+do+Mindelo+Guilherme+Dias+Chantre+-+EICM+GDC/@16.8922869,-24.9904061,17z/data=!4m15!1m8!3m7!1s0x94f1c027dae4739:0xd42ee4d7452e5ce5!2sEscola+Comercial+e+Industrial+do+Mindelo,+Av.+Dr.+Alberto+Leite+5,+Mindelo!3b1!8m2!3d16.8922869!4d-24.9904061!16s%2Fg%2F11vlrxl17q!3m5!1s0x94f1c026390f379:0x1fd20acc18d3338e!8m2!3d16.892506!4d-24.9901961!16s%2Fg%2F11c7sq9dkk?entry=ttu&g_ep=EgoyMDI2MDMyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Av. Dr. Alberto Leite 5, Mindelo</a></p>
-                    <p><a href="tel:+2321313">+232 13 13</a></p>
-                    <p><a href="mailto:eicmgdcmindelo@gmail.com">eicmgdcmindelo@gmail.com</a></p>   
-                    <p><a href="mailto:geipeicmgdcsv@gmail.com">geipeicmgdcsv@gmail.com</a></p>
-                </div>
-
-                <div class="redes-container">
-                    <h4>SIGA A EICM-GDC NAS REDES SOCIAIS</h4>
-                    <div class="redes-sociais">
-                        <a href="https://www.facebook.com/escolatecnicadomindeloGDC" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/eicm_sv/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="footer-bottom">
-                <p>© 2026 GEIPE - Todos os direitos reservados</p>
-                <a href="politicas.html">Políticas e Privacidade</a>
-            </div>
-
-        </footer>
-
-        <button id="btn-topo">↑</button>
-        <script src="./scripts/contactos.js"></script>
-        <script src="./scripts/botao.js"></script>
-    </body>
-</html>
+<?php include 'php/footer.php'; ?>

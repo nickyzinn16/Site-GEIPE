@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Candidatura - GEIPE</title>
         <link rel="stylesheet" href="../styles/candidatura.css"> 
+        <link rel="icon" type="image/png" href="../resources/images/logo-geipe.png">
     </head>
     <body>
         <div>
