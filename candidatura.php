@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>Candidatura - GEIPE</title>
+        <link rel="icon" type="image/png" href="./resources/images/logo-geipe.png">
         <link rel="stylesheet" href="./styles/candidatura.css"> 
+        <script src="https://kit.fontawesome.com/35842701b4.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div>

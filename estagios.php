@@ -11,7 +11,7 @@
         <h1>ESTÁGIOS DO GEIPE EICM-GDC - O SEU FUTURO</h1>
         <p>Explora o módulo formativo em contacto real de trabalho.</p>
         <div>
-            <a href="candidatura.html" class="candidatura">Candidatar á um Estágio</a>
+            <a href="candidatura.php" class="candidatura">Candidatar á um Estágio</a>
         </div>
     </div>
 </section>
