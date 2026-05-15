@@ -20,8 +20,8 @@
                         <i class="fa-solid fa-user"></i>
                     </a>
                     <div class="sair-cliente">
-                        <p class="user-name">Nome</p>
-                        <a href="../index.php">Sair da conta</a>
+                        <p class="user-name"><?= $_SESSION['utilizador'] ?></p>
+                        <a href="../php/logout.php">Sair da conta</a>
                     </div>
                 </li>
             </ul>

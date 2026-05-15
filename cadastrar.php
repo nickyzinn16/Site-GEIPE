@@ -1,3 +1,29 @@
+<?php
+    include 'php/conn.php';
+
+    if(isset($_POST['cadastrar'])){
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $utilizador = $_POST['utilizador'];
+        $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+
+        // Verifica se o email ou utilizador já existem
+        $verifica = mysqli_query($conn, "SELECT * FROM utilizadores WHERE email = '$email' OR utilizador = '$utilizador'");
+
+        if(mysqli_num_rows($verifica) > 0){
+            $erro = "Email ou utilizador já existe!";
+        } else {
+            $sql = "INSERT INTO utilizadores (nome, email, utilizador, senha) VALUES ('$nome', '$email', '$utilizador', '$senha')";
+            if(mysqli_query($conn, $sql)){
+                header("Location: login.php?sucesso=1");
+                exit();
+            } else {
+                $erro = "Erro ao criar conta!";
+            }
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
     <head>
@@ -10,36 +36,35 @@
     <body>
         <div class="caixaCadastrar">
             <h2>Cadastre-se na plataforma do GEIPE</h2>
-            
-            <form id="RegistForm">
+
+            <?php if(isset($erro)): ?>
+                <p style="color:red;"><?= $erro ?></p>
+            <?php endif; ?>
+
+            <form method="POST">
+                <div class="campo">
+                    <label>Nome completo:</label>
+                    <input type="text" name="nome" placeholder="O seu nome completo" required>
+                </div>
+
+                <div class="campo">
+                    <label>Email:</label>
+                    <input type="email" name="email" placeholder="O seu email" required>
+                </div>
+
                 <div class="campo">
                     <label>Utilizador:</label>
-                    <input type="text" placeholder="Defina um nome de utilizador" required>
+                    <input type="text" name="utilizador" placeholder="Defina um nome de utilizador" required>
                 </div>
 
                 <div class="campo">
                     <label>Senha:</label>
-                    <input type="password" placeholder="Defina uma senha" required>
+                    <input type="password" name="senha" placeholder="Defina uma senha" required>
                 </div>
 
-                <button type="submit" class="btn-entrar">Criar conta</button>
+                <button type="submit" name="cadastrar" class="btn-entrar">Criar conta</button>
             </form>
+            <p><a href="login.php">Já tenho conta</a></p>
         </div>
-        
-        <script>
-            const caixaCadrastar = document.querySelector('.caixaCadrastar');
-            const form = document.getElementById('RegistForm');
-
-            form.addEventListener('submit', function(event) {
-                const inputs = form.querySelectorAll('input');
-                let vazio = false;
-                inputs.forEach(input => { if(!input.value) vazio = true; });
-                
-                if (vazio) {
-                    event.preventDefault();
-                    alert("Dados não preenchidos completamente");
-                }
-            });
-        </script>
     </body>
 </html>

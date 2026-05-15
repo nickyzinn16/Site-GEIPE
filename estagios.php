@@ -137,7 +137,7 @@
                 </ul>
             <br><br>
 
-            <h3>INFORMATICA DE GESTAO (IG)</h3>
+            <h3>INFORMATICA DE GESTÃO (IG)</h3>
             <h3 class="vagas">Vagas Disponíveis: 0</h3>
                 <ul>
                     <li>Técnicas Administrativas, Comunicação, Comerciais e Aprovisionamento</li>

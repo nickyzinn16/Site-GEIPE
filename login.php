@@ -1,3 +1,30 @@
+<?php
+    session_start();
+    include 'php/conn.php';
+
+    if(isset($_POST['login'])){
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+
+        $sql = "SELECT * FROM utilizadores WHERE email = '$email'";
+        $resultado = mysqli_query($conn, $sql);
+
+        if(mysqli_num_rows($resultado) > 0){
+            $utilizador = mysqli_fetch_assoc($resultado);
+            if(password_verify($senha, $utilizador['senha'])){
+                $_SESSION['utilizador'] = $utilizador['utilizador'];
+                $_SESSION['tipo'] = $utilizador['tipo'];
+                header("Location: cliente/index.php");
+                exit();
+            } else {
+                $erro = "Senha incorreta";
+            }
+        } else {
+            $erro = "Utilizador não encontrado";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
     <head>
@@ -10,37 +37,25 @@
     <body>
         <div class="caixaLogin">
             <h2>Entre na plataforma do GEIPE</h2>
+
+            <?php if(isset($erro)): ?>
+                <p style="color:red;"><?= $erro ?></p>
+            <?php endif; ?>
             
-            <form id="loginForm">
+            <form id="loginForm" method="POST">
                 <div class="campo">
-                    <label>Utilizador:</label>
-                    <input type="text" placeholder="Nome do utilizador" required>
+                    <label>Email:</label>
+                    <input type="email" name="email" placeholder="O seu email" required>
                 </div>
 
                 <div class="campo">
                     <label>Senha:</label>
-                    <input type="password" placeholder="Senha do utilizador" required>
+                    <input type="password" name="senha" placeholder="A sua senha" required>
                 </div>
 
-                <button type="submit" class="btn-entrar">Iniciar Sessão</button>
+                <button type="submit" name="login" class="btn-entrar">Iniciar Sessão</button>
             </form>
-            <p><a href="cadastrar.html">Não Tenho Conta</a></p>
+            <p><a href="cadastrar.php">Não Tenho Conta</a></p>
         </div>
-        
-        <script>
-            const caixaLogin = document.querySelector('.caixaLogin');
-            const form = document.getElementById('loginForm');
-            
-            form.addEventListener('submit', function(event) {
-                const inputs = form.querySelectorAll('input');
-                let vazio = false;
-                inputs.forEach(input => { if(!input.value) vazio = true; });
-                
-                if (vazio) {
-                    event.preventDefault();
-                    alert("Dados não preenchidos completamente");
-                }
-            });
-        </script>
     </body>
 </html>

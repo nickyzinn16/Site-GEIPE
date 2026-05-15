@@ -42,9 +42,11 @@ body {
 
 /*estilo do botao*/
 .form button {
-    
+    cursor: pointer;
     padding: 10px;
     background-color: #0a2c66;
+    color: white;
     border: none;
-    border-radius: 6px;   
+    border-radius: 6px;
+    width: 100%;
 }
