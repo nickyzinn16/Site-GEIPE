@@ -3,10 +3,10 @@
     include 'php/conn.php';
 
     if(isset($_POST['login'])){
-        $utilizador = $_POST['utilizador'];
+        $email = $_POST['email'];
         $senha = $_POST['senha'];
 
-        $sql = "SELECT * FROM utilizadores WHERE email = '$utilizador'";
+        $sql = "SELECT * FROM utilizadores WHERE email = '$email'";
         $resultado = mysqli_query($conn, $sql);
 
         if(mysqli_num_rows($resultado) > 0){
@@ -41,18 +41,16 @@
     </head>
     <body>
         <div class="caixaLogin">
-            <img src="./resources/images/Blogs/Noticia-3.jpg" alt="imagem na página de login">
-        <div>
             <h2>Entre na plataforma do GEIPE</h2>
 
             <?php if(isset($erro)): ?>
-                <p style="color:red;"><?= $erro ?></p>
+                <p><?= $erro ?></p>
             <?php endif; ?>
             
             <form id="loginForm" method="POST">
                 <div class="campo">
-                    <label>Utilizador:</label>
-                    <input type="text" name="utilizador" placeholder="O seu nome de utilizador" required>
+                    <label>Email:</label>
+                    <input type="email" name="email" placeholder="O seu email" required>
                 </div>
 
                 <div class="campo">
@@ -62,8 +60,7 @@
 
                 <button type="submit" name="login" class="btn-entrar">Iniciar Sessão</button>
             </form>
-            <p><a href="cadastrar.php">Não Tenho Conta, Cadastrar</a></p>
-        </div>
+            <p><a href="cadastrar.php">Não Tenho Conta</a></p>
         </div>
     </body>
 </html>
