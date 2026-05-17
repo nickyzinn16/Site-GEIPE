@@ -22,14 +22,16 @@
 
 /* Estilo do título dentro do banner */
 .main-banner h1 {
-    font-size: 45px;
+    font-size: 55px;
     margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
 }
 
 /* Estilo do texto dentro do banner */
 .main-banner p {
-    font-size: 19px;
+    font-size: 24px;
     margin-bottom: 25px;
+    font-family: 'Playfair Display', serif;
 }
 
 /* Estilo do botão de candidatar a um estagio de um curso */

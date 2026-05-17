@@ -14,7 +14,12 @@
             if(password_verify($senha, $utilizador['senha'])){
                 $_SESSION['utilizador'] = $utilizador['utilizador'];
                 $_SESSION['tipo'] = $utilizador['tipo'];
-                header("Location: cliente/index.php");
+                
+                if($utilizador['tipo'] == 'admin'){
+                    header("Location: admin/index.php");
+                } else {
+                    header("Location: cliente/index.php");
+                }
                 exit();
             } else {
                 $erro = "Senha incorreta";
@@ -55,7 +60,7 @@
 
                 <button type="submit" name="login" class="btn-entrar">Iniciar Sessão</button>
             </form>
-            <p><a href="cadastrar.php">Não Tenho Conta</a></p>
+            <p><a href="cadastrar.php">Não Tenho Conta, Cadastrar</a></p>
         </div>
     </body>
 </html>

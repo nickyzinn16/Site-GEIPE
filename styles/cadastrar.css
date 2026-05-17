@@ -6,12 +6,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; 
-    background-color: #f0f0f0;
+    background-image: url('../resources/images/ex.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Caixa principal do formulário */
 .caixaCadastrar {
-    background: rgba(10, 44, 102, 0.95); 
+    background: rgba(31, 36, 43, 0.95); 
     padding: 40px; 
     border-radius: 15px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0);

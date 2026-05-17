@@ -1,0 +1,60 @@
+body {
+    background-color: #f0f2f5;
+}
+
+.admin-painel {
+    margin-top: 80px;
+    padding: 30px 80px;
+}
+
+.admin-painel h1 {
+    color: #0a2c66;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* Cards do painel */
+.cards-admin {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-admin {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 7px solid #ffc107;
+    box-shadow: 0 2px 10px #00000015;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card-admin i {
+    font-size: 40px;
+    color: #0a2c66;
+    margin-bottom: 15px;
+}
+
+.card-admin h3 {
+    color: #0a2c66;
+    margin-bottom: 10px;
+}
+
+.card-admin p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card-admin a {
+    background-color: #0a2c66;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+

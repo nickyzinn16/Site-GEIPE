@@ -64,7 +64,7 @@
 
                 <button type="submit" name="cadastrar" class="btn-entrar">Criar conta</button>
             </form>
-            <p><a href="login.php">Já tenho conta</a></p>
+            <p><a href="login.php">Já tenho conta, Iniciar Sessão</a></p>
         </div>
     </body>
 </html>

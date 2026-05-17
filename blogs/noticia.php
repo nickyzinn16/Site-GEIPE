@@ -1,7 +1,19 @@
 <?php
     include '../php/conn.php';
-    $id = 4;
-    $resultado = mysqli_query($conn, "SELECT * FROM noticias WHERE id = $id");
+
+    if(!isset($_GET['id']) || !is_numeric($_GET['id'])){
+        header("Location: ../blog.php");
+        exit();
+    }
+
+    $id = intval($_GET['id']);
+    $resultado = mysqli_query($conn, "SELECT * FROM noticias WHERE id = $id AND publicada = 1");
+
+    if(mysqli_num_rows($resultado) == 0){
+        header("Location: ../blog.php");
+        exit();
+    }
+
     $noticia = mysqli_fetch_assoc($resultado);
 ?>
 <html>
@@ -37,7 +49,7 @@
                 </nav>
             </header>
 
-            <section class="banner-blog2">
+            <section class="banner-blog1">
                 <div class="main-banner">
                     <h1><?= $noticia['titulo'] ?></h1>
                     <p><?= $noticia['resumo'] ?></p>
