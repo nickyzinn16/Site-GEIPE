@@ -1,6 +1,6 @@
 <?php
     $titulo = "Início - GEIPE";
-    $css = "cliente/index.css";
+    $css = "/geip/styles/cliente/index.css";
     $paginaAtiva = "inicio";
 ?>
 
@@ -42,13 +42,9 @@
             <h3>PRINCÍPIOS</h3>
             <p>
                 Todos queremos fazer de vós, bons amigos, bons cidadãos, bons profissionais;<br><br>
-
                 Ética profissional pautada pelo rigor técnico na execução das tarefas, na legalidade e honestidade no desempenho das funções;<br><br>
-
                 Responsabilidade social visando a solidariedade e defesa do bem comum;<br><br>
-
                 Desenvolvimento humano e profissional tendo em vista a obtenção de competências sociais e esforço permanente de valorização profissional;<br><br>
-
                 Inclusão educativa e social.
             </p>
         </div>
@@ -58,7 +54,7 @@
         <h2>PÚBLICO-ALVO</h2>
         <ul>
             <li>Alunos do 7º ao 12º ano</li>
-            <li>Alunos da via técnica  (10º, 11º e 12º Ano)</li>
+            <li>Alunos da via técnica (10º, 11º e 12º Ano)</li>
             <li>Formandos profissionais</li>
             <li>Colaboradores da EICM_GDC</li>
             <li>Professores da EICM_GDC</li>
@@ -78,7 +74,7 @@
 
     <section class="resultados">
         <div class="box">
-            <h3>QUE  RESULTADOS PRETENDEMOS OBTER?</h3>
+            <h3>QUE RESULTADOS PRETENDEMOS OBTER?</h3>
             <p>
                 <strong>Resultado 1</strong> – Aumentar o número de alunos no estágio curricular/profissional;<br><br>
                 <strong>Resultado 2</strong> – Aumentar o número de diplomados da via técnica inseridos no mercado de trabalho;<br><br>

@@ -1,7 +1,7 @@
 <?php
     include '../php/conn.php';
 
-    if(!isset($_GET['id']) || !is_numeric($_GET['id'])){
+    if(!isset($_GET['id'])){
         header("Location: ../blog.php");
         exit();
     }
@@ -32,7 +32,7 @@
                 <nav class="navbar">
                     <div class="logo">
                         <a href="../index.php">
-                            <img alt="Logo GEIPE" src="../resources/images/logo-geipe.png" class="logoGeipe">
+                            <img alt="Logo GEIPE" src="../resources/images/logo-geipe.png">
                         </a>
                     </div>
                     <div class="menu">
@@ -76,7 +76,7 @@
                     <h4>INFORMAÇÕES ÚTEIS</h4>
                     <ul>
                         <li><a href="../estagios.php">Como conseguir um estágio</a></li>
-                        <li><a href="../orientacao.php">Orientação vocacional</a></li>
+                        <li><a href="../insercao.php">Orientação vocacional</a></li>
                         <li><a href="../insercao.php">Inserção Profissional</a></li>
                         <li><a href="../perguntas.php">Perguntas frequentes (FAQ)</a></li>
                     </ul>
@@ -89,15 +89,15 @@
                     <p><a href="mailto:geipeicmgdcsv@gmail.com">geipeicmgdcsv@gmail.com</a></p>
                 </div>
                 <div class="redes-container">
-                    <h4>SIGA A EICM-GDC NAS REDES SOCIAIS</h4>
+                    <h4>REDES SOCIAIS</h4>
                     <div class="redes-sociais">
                         <a href="https://www.facebook.com/escolatecnicadomindeloGDC" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/mineducacaocv/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://www.instagram.com/eicm_sv/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 GEIPE - Todos os direitos reservados</p>
+                <p>© 2026 GEIPE EICM-GDC - Todos os direitos reservados</p>
                 <a href="../politicas.php">Políticas e Privacidade</a>
             </div>
         </footer>

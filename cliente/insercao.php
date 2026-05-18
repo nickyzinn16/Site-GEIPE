@@ -1,6 +1,6 @@
 <?php
     $titulo = "Inserção Profissional - GEIPE";
-    $css = "cliente/insercao.css";
+    $css = "/geip/styles/cliente/insercao.css";
     $paginaAtiva = "insercao";
 ?>
 
@@ -20,7 +20,7 @@
     <div class="cards">
         <div class="card card-info">
             <div class="card-logo">
-                <img src="../resources/images/iefplogo.png" alt="Logo IEFP">
+                <img src="/geip/resources/images/iefplogo.png" alt="Logo IEFP">
             </div>
             <div class="card-conteudo">
                 <h3>IEFP</h3>
@@ -31,7 +31,7 @@
 
         <div class="card card-info">
             <div class="card-logo">
-                <img src="../resources/images/kre+.jpg" alt="Logo KRE+">
+                <img src="/geip/resources/images/kre+.jpg" alt="Logo KRE+">
             </div>
             <div class="card-conteudo">
                 <h3>KRE+</h3>

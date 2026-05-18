@@ -1,0 +1,96 @@
+/* Container do conteúdo da notícia */
+.conteudo-noticia {
+    background-color: white;
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Caixa onde o artigo da notícia é apresentado */
+.noticia-container {
+    background-color: #f2f2f2;
+    max-width: 900px;
+    padding: 10px 40px;
+    border-radius: 6px;
+}
+
+/* Título principal da notícia */
+.noticia-container h1 {
+    color: #1E1E1E;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Texto da notícia */
+.noticia-container p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #1E1E1E;
+    text-align: justify;
+}
+
+/* Banner */
+.main-banner {
+    max-width: 600px;
+}
+
+.main-banner h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.main-banner p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+/* Banners dos blogs */
+.banner-blog1,
+.banner-blog2,
+.banner-blog3,
+.banner-blog4,
+.banner-blog5,
+.banner-blog6 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 43vh;
+    padding: 40px 80px;
+    color: lightgray;
+    margin-top: 60px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner-blog1 {
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("../../resources/images/Blogs/Noticia-1.jpg");
+}
+
+.banner-blog2 {
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("../../resources/images/Blogs/Noticia-2.jpg");
+}
+
+.banner-blog3 {
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("../../resources/images/Blogs/Noticia-3.jpg");
+}
+
+.banner-blog4 {
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("../../resources/images/Blogs/Noticia-4.jpg");
+}
+
+.banner-blog5 {
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("../../resources/images/Blogs/Noticia-5.webp");
+}
+
+.banner-blog6 {
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("../../resources/images/Blogs/Noticia-6.jpg");
+}

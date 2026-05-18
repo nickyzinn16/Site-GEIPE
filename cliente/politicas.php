@@ -1,6 +1,6 @@
 <?php
 $titulo = "Políticas - GEIPE";
-$css = "cliente/politicas.css";
+$css = "/geip/styles/cliente/politicas.css";
 $paginaAtiva = "";
 ?>
 

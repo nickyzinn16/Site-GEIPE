@@ -12,6 +12,8 @@
                 <li><a href="../admin/contactos.php" class="<?= ($paginaAtiva == 'contactos') ? 'ativo' : '' ?>">Contactos</a></li>
                 <li><a href="../admin/utilizadores.php" class="<?= ($paginaAtiva == 'utilizadores') ? 'ativo' : '' ?>">Utilizadores</a></li>
                 <li><a href="../admin/noticias.php" class="<?= ($paginaAtiva == 'noticias') ? 'ativo' : '' ?>">Notícias</a></li>
+                <li><a href="../admin/estagios.php" class="<?= ($paginaAtiva == 'estagios') ? 'ativo' : '' ?>">Estágios</a></li>
+                <li><a href="../admin/perguntas.php" class="<?= ($paginaAtiva == 'perguntas') ? 'ativo' : '' ?>">Perguntas</a></li>
                 <li><a href="../php/logout.php" class="btn-login">Sair</a></li>
             </ul>
         </div>

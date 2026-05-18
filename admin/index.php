@@ -6,7 +6,7 @@
 ?>
 
 <section class="admin-painel">
-    <h1>Bem-vindo ao painel de administração, <?= $_SESSION['utilizador'] ?>!</h1>
+    <h1>Bem-vindo ao painel de administração, <?= $_SESSION['utilizador'] ?></h1>
 
     <div class="cards-admin">
         <div class="card-admin">
@@ -35,6 +35,20 @@
             <h3>Notícias</h3>
             <p>Gerir notícias do blog</p>
             <a href="noticias.php">Ver</a>
+        </div>
+
+        <div class="card-admin">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h3>Estágios</h3>
+            <p>Gerir vagas de estágios</p>
+            <a href="estagios.php">Ver</a>
+        </div>
+
+        <div class="card-admin">
+            <i class="fa-solid fa-circle-question"></i>
+            <h3>Perguntas FAQ</h3>
+            <p>Gerir perguntas frequentes</p>
+            <a href="perguntas.php">Ver</a>
         </div>
     </div>
 </section>

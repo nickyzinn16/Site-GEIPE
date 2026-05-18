@@ -19,6 +19,7 @@
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 2px 10px #00000015;
 }
 
 .tabela-admin th {
@@ -46,7 +47,6 @@
     background-color: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px #00000015;
 }
 
 .campo-admin {

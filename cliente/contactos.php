@@ -1,6 +1,6 @@
 <?php
 $titulo = "Contactos - GEIPE";
-$css = "cliente/contactos.css";
+$css = "/geip/styles/cliente/contactos.css";
 $paginaAtiva = "contactos";
 ?>
 
@@ -18,7 +18,7 @@ $paginaAtiva = "contactos";
         <h2>ENVIE-NOS UMA MENSAGEM</h2>
         <p>Preencha o formulário abaixo e entraremos em contacto o mais breve possível.</p>
 
-        <form action="../php/contacto.php" method="POST" class="contact-form">
+        <form action="/geip/php/contacto.php" method="POST" class="contact-form">
             <label for="nome">Nome</label>
             <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
 
@@ -36,17 +36,14 @@ $paginaAtiva = "contactos";
     </div>
 
     <div class="contact-image">
-        <img src="../resources/images/cont.png" alt="Contactos" usemap="#mapa-contactos">
+        <img src="/geip/resources/images/cont.png" alt="Contactos" usemap="#mapa-contactos">
     </div>
 
     <map name="mapa-contactos">
         <area shape="rect" coords="105,225,419,277" href="mailto:geipeicmgdcsv@email.com" alt="Email GEIPE">
         <area shape="rect" coords="101,295,455,356" href="mailto:eicmgdcmindelo@email.com" alt="Email Escola">
         <area shape="rect" coords="104,368,303,429" href="tel:+2321313" alt="Numero Escola">
-        <area shape="rect" coords="104,447,388,501"
-            href="https://www.google.com/maps/place/Escola+Industrial+e+Comercial+do+Mindelo+Guilherme+Dias+Chantre+-+EICM+GDC/"
-            target="_blank"
-            alt="Localizacao Escola">
+        <area shape="rect" coords="104,447,388,501" href="https://www.google.com/maps/place/Escola+Industrial+e+Comercial+do+Mindelo+Guilherme+Dias+Chantre+-+EICM+GDC/" target="_blank" alt="Localizacao Escola">
     </map>
 </section>
 

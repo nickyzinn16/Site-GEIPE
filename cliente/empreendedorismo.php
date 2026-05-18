@@ -1,6 +1,6 @@
 <?php
 $titulo = "Empreendedorismo - GEIPE";
-$css = "cliente/empreendedorismo.css";
+$css = "/geip/styles/cliente/empreendedorismo.css";
 $paginaAtiva = "empreendedorismo";
 ?>
 

@@ -1,0 +1,37 @@
+.admin-painel {
+    margin-top: 80px;
+    padding: 30px 80px;
+}
+
+.admin-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.admin-painel h1 {
+    color: #0a2c66;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.tabela-admin {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabela-admin th {
+    background-color: #0a2c66;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+.tabela-admin td {
+    padding: 15px;
+    border-bottom: 1px solid #f0f2f5;
+    color: #0a2c66;
+}

@@ -9,9 +9,11 @@
         $sql = "INSERT INTO candidaturas (nome, area, email) VALUES ('$nome', '$area', '$email')";
 
         if(mysqli_query($conn, $sql)){
-            $sucesso = "Candidatura enviada com sucesso!";
+            header("Location: estagios.php");
+            exit();
         } else {
-            $erro = "Erro ao enviar candidatura!";
+            header("Location: candidatura.php");
+            exit();
         }
     }
 ?>
@@ -41,12 +43,12 @@
 
                     <form method="POST">
                         <div class="form-lab">
-                            <label for="nome">Nome Completo</label>
+                            <label for="nome">Nome Completo:</label>
                             <input type="text" id="nome" name="nome" required>
                         </div>
 
                         <div class="form-lab">
-                            <label for="area">Área Escolar</label>
+                            <label for="area">Área Escolar:</label>
                             <select id="area" name="area" required>
                                 <option value="">Selecione uma area</option>
                                 <option value="ASIBD">ASIBD</option>
@@ -60,7 +62,7 @@
                         </div>
 
                         <div class="form-lab">
-                            <label for="email">Email</label>
+                            <label for="email">Email:</label>
                             <input type="email" id="email" name="email" required>
                         </div>
 
