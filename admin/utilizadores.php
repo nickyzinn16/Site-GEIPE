@@ -20,7 +20,6 @@
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Utilizador</th>
-                <th>Tipo</th>
                 <th>Data</th>
             </tr>
         </thead>
@@ -31,7 +30,6 @@
                 <td><?= $utilizador['nome'] ?></td>
                 <td><?= $utilizador['email'] ?></td>
                 <td><?= $utilizador['utilizador'] ?></td>
-                <td><?= $utilizador['tipo'] ?></td>
                 <td><?= $utilizador['criado'] ?></td>
             </tr>
             <?php endwhile; ?>

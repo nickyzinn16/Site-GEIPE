@@ -13,13 +13,7 @@
             $utilizador = mysqli_fetch_assoc($resultado);
             if(password_verify($senha, $utilizador['senha'])){
                 $_SESSION['utilizador'] = $utilizador['utilizador'];
-                $_SESSION['tipo'] = $utilizador['tipo'];
-                
-                if($utilizador['tipo'] == 'admin'){
-                    header("Location: admin/index.php");
-                } else {
-                    header("Location: cliente/index.php");
-                }
+                header("Location: admin/index.php");
                 exit();
             } else {
                 $erro = "Senha incorreta";
@@ -60,7 +54,6 @@
 
                 <button type="submit" name="login" class="btn-entrar">Iniciar Sessão</button>
             </form>
-            <p><a href="cadastrar.php">Não Tenho Conta</a></p>
         </div>
     </body>
 </html>
