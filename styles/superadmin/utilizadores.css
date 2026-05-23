@@ -1,3 +1,8 @@
+.admin-painel {
+    margin-top: 80px;
+    padding: 30px 80px;
+}
+
 .admin-topo {
     display: flex;
     justify-content: space-between;
@@ -5,13 +10,10 @@
     margin-bottom: 20px;
 }
 
-.btn-criar {
-    background-color: #0a2c66;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: 0.3s;
+.admin-painel h1 {
+    color: #0a2c66;
+    margin-bottom: 30px;
+    font-size: 24px;
 }
 
 .tabela-admin {
@@ -31,6 +33,18 @@
 .tabela-admin td {
     padding: 15px;
     border-bottom: 1px solid #f0f2f5;
+    color: #0a2c66;
+}
+
+
+.btn-criar {
+    background-color: #0a2c66;
+    cursor: pointer;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .btn-apagar {
@@ -59,15 +73,10 @@
     margin-bottom: 8px;
 }
 
-.campo-admin input,
-.campo-admin textarea {
+.campo-admin input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid darkgrey;
     border-radius: 6px;
     font-size: 15px;
-}
-
-.campo-admin textarea {
-    resize: vertical;
 }

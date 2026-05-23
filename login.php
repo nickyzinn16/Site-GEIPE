@@ -13,7 +13,13 @@
             $utilizador = mysqli_fetch_assoc($resultado);
             if(password_verify($senha, $utilizador['senha'])){
                 $_SESSION['utilizador'] = $utilizador['utilizador'];
-                header("Location: admin/index.php");
+                $_SESSION['email'] = $utilizador['email'];
+
+                if($utilizador['email'] == 'superadmin@gmail.com'){
+                    header("Location: superadmin/index.php");
+                } else {
+                    header("Location: admin/index.php");
+                }
                 exit();
             } else {
                 $erro = "Senha incorreta";
