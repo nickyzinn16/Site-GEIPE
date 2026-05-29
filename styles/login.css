@@ -1,52 +1,46 @@
-/* Estilo da página de login */
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     background-image: url('../resources/images/ex.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/* Caixa principal do formulário de login */
 .caixaLogin {
-    background: rgba(31, 36, 43, 0.95); 
-    padding: 40px; 
+    background: rgba(10, 44, 102, 0.85);
+    border: 1px solid rgba(255, 193, 7, 0.4);
+    padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0);
     width: 320px;
     text-align: center;
     color: white;
 }
 
-/* Estrutura de cada campo */
 .campo {
     margin-bottom: 20px;
-    text-align: left; 
+    text-align: left;
 }
 
-/* Texto do label dos campos */
 .campo label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
 }
 
-/* Campos de entrada  */
 .campo input {
     width: 100%;
     padding: 12px;
     border: none;
     border-radius: 5px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     background-color: white;
 }
 
-/* Botão de iniciar sessão */
 .btn-entrar {
     width: 100%;
     padding: 12px;
@@ -60,20 +54,24 @@ body {
     transition: 0.3s;
 }
 
-/* Efeito ao passar o rato no botão de login */
 .btn-entrar:hover {
     background-color: #e5ac00;
     transform: scale(1.02);
 }
 
-/* Não tenho conta */
 a {
-    color: #ffc107;  
+    color: #ffc107;
     text-decoration: none;
     font-size: 14px;
 }
 
-/* Efeito ao passar o rato no "Não tenho conta" */
 a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .caixaLogin {
+        width: 75%;
+        padding: 30px 20px;
+    }
 }

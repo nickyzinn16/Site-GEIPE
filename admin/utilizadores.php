@@ -5,7 +5,7 @@
     include '../php/admin/header.php';
     include '../php/conn.php';
 
-    $resultado = mysqli_query($conn, "SELECT * FROM utilizadores");
+    $resultado = mysqli_query($conn, "SELECT * FROM utilizadores WHERE email != 'superadmin@gmail.com'");
 ?>
 
 <section class="admin-painel">
@@ -16,7 +16,6 @@
     <table class="tabela-admin">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Utilizador</th>
@@ -26,7 +25,6 @@
         <tbody>
             <?php while($utilizador = mysqli_fetch_assoc($resultado)): ?>
             <tr>
-                <td><?= $utilizador['id'] ?></td>
                 <td><?= $utilizador['nome'] ?></td>
                 <td><?= $utilizador['email'] ?></td>
                 <td><?= $utilizador['utilizador'] ?></td>

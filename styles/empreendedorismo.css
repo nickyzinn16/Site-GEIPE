@@ -35,3 +35,34 @@
     background-color: #ffc107;
     color: #0a2c66;
 }
+
+@media (max-width: 768px) {
+    section {
+        padding: 20px 15px;
+    }
+
+    .navbar {
+        padding: 8px 15px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .menu ul li a {
+        font-size: 13px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        min-width: unset;
+        padding: 20px;
+    }
+}

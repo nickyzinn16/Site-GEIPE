@@ -72,3 +72,43 @@ form {
     width: 700px;
     height: auto;
 }
+
+@media (max-width: 768px) {
+    section {
+        padding: 20px 15px;
+    }
+
+    .navbar {
+        padding: 8px 15px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .menu ul li a {
+        font-size: 13px;
+    }
+
+    .contact-area {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .contact-image {
+        display: none;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+}

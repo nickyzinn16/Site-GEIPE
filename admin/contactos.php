@@ -16,7 +16,6 @@
     <table class="tabela-admin">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Assunto</th>
@@ -27,7 +26,6 @@
         <tbody>
             <?php while($contacto = mysqli_fetch_assoc($resultado)): ?>
             <tr>
-                <td><?= $contacto['id'] ?></td>
                 <td><?= $contacto['nome'] ?></td>
                 <td><?= $contacto['email'] ?></td>
                 <td><?= $contacto['assunto'] ?></td>

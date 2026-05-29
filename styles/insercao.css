@@ -65,3 +65,46 @@
     padding: 10px 15px;
     border-radius: 4px;
 }
+
+/* ===== MOBILE (até 768px) ===== */
+@media (max-width: 768px) {
+    section {
+        padding: 20px 15px;
+    }
+
+    .navbar {
+        padding: 8px 15px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .menu ul li a {
+        font-size: 13px;
+    }
+
+    .descricao {
+        margin-left: 0;
+        padding: 0 15px;
+        text-align: left;
+    }
+
+    .card-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .card-logo img {
+        width: 80px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}

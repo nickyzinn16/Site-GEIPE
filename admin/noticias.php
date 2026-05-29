@@ -24,7 +24,6 @@
     <table class="tabela-admin">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Título</th>
                 <th>Data</th>
                 <th>Ações</th>
@@ -33,11 +32,10 @@
         <tbody>
             <?php while($noticia = mysqli_fetch_assoc($resultado)): ?>
             <tr>
-                <td><?= $noticia['id'] ?></td>
                 <td><?= $noticia['titulo'] ?></td>
                 <td><?= $noticia['criado'] ?></td>
                 <td>
-                    <a href="noticias.php?apagar=<?= $noticia['id'] ?>" class="btn-apagar">Apagar</a>
+                    <a href="noticias.php?apagar=<?= $noticia['id'] ?>" class="btn-apagar" onclick="return confirm('Tens a certeza que queres apagar esta noticia?')">Apagar</a>
                 </td>
             </tr>
             <?php endwhile; ?>

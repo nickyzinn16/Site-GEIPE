@@ -1,6 +1,5 @@
 <?php
     $titulo = "Painel Admin - GEIPE";
-    $css = "admin/index.css";
     $paginaAtiva = "inicio";
     include '../php/admin/header.php';
 ?>

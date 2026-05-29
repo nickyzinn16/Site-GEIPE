@@ -24,7 +24,6 @@
     <table class="tabela-admin">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Utilizador</th>
@@ -35,14 +34,14 @@
         <tbody>
             <?php while($utilizador = mysqli_fetch_assoc($resultado)): ?>
             <tr>
-                <td><?= $utilizador['id'] ?></td>
                 <td><?= $utilizador['nome'] ?></td>
                 <td><?= $utilizador['email'] ?></td>
                 <td><?= $utilizador['utilizador'] ?></td>
                 <td><?= $utilizador['criado'] ?></td>
                 <td>
                     <?php if($utilizador['email'] != 'superadmin@gmail.com'): ?>
-                        <a href="utilizadores.php?apagar=<?= $utilizador['id'] ?>" class="btn-apagar">Apagar</a>
+                        <a href="mudar-senha.php?id=<?= $utilizador['id'] ?>" class="btn-criar">Mudar Senha</a>
+                        <a href="utilizadores.php?apagar=<?= $utilizador['id'] ?>" class="btn-apagar" onclick="return confirm('Tens a certeza que queres apagar este utilizador?')">Apagar</a>
                     <?php endif; ?>
                 </td>
             </tr>

@@ -76,3 +76,45 @@
 .principios {
     padding: 60px 80px;
 }
+
+/* ===== MOBILE (até 768px) ===== */
+@media (max-width: 768px) {
+    section {
+        padding: 20px 15px;
+    }
+
+    .principios {
+        padding: 20px 15px;
+    }
+
+    .navbar {
+        padding: 8px 15px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .menu ul li a {
+        font-size: 13px;
+    }
+
+    .missao-visao {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        min-width: unset;
+        padding: 20px;
+    }
+}

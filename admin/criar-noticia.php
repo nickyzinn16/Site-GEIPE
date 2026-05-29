@@ -9,15 +9,38 @@
         $titulo_noticia = $_POST['titulo'];
         $resumo = $_POST['resumo'];
         $conteudo = $_POST['conteudo'];
-        $imagem = $_POST['imagem'];
+        $erro = "";
 
-        $sql = "INSERT INTO noticias (titulo, resumo, imagem, conteudo) VALUES ('$titulo_noticia', '$resumo', '$imagem', '$conteudo')";
+        // Tratamento do upload da capa
+        $file = $_FILES['imagem'];
+        $file_name = $file['name'];
+        $file_tmp_name = $file['tmp_name'];
+        $size = $file['size'];
 
-        if(mysqli_query($conn, $sql)){
-            header("Location: noticias.php");
-            exit();
+        $file_extension = pathinfo($file_name, PATHINFO_EXTENSION);
+        $permitted_extensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+
+        if(!in_array(strtolower($file_extension), $permitted_extensions)){
+            $erro = "Formato de imagem não suportado. Use JPG, PNG, GIF ou WEBP.";
+        } elseif($size > 10*1024*1024){
+            $erro = "Imagem muito grande. Máximo 10MB.";
         } else {
-            $erro = "Erro ao criar notícia!";
+            $new_file_name = time().'_'.$file_name;
+            $destination = "../uploads/noticias/".$new_file_name;
+
+            if(move_uploaded_file($file_tmp_name, $destination)){
+                $imagem = "uploads/noticias/".$new_file_name;
+                $sql = "INSERT INTO noticias (titulo, resumo, imagem, conteudo) VALUES ('$titulo_noticia', '$resumo', '$imagem', '$conteudo')";
+
+                if(mysqli_query($conn, $sql)){
+                    header("Location: noticias.php");
+                    exit();
+                } else {
+                    $erro = "Erro ao criar notícia!";
+                }
+            } else {
+                $erro = "Erro ao fazer upload da imagem.";
+            }
         }
     }
 ?>
@@ -28,12 +51,12 @@
         <a href="noticias.php" class="btn-criar">Voltar</a>
     </div>
 
-    <?php if(isset($erro)): ?>
-        <p><?= $erro ?></p>
+    <?php if(isset($erro) && $erro != ""): ?>
+        <p style="color:red;"><?= $erro ?></p>
     <?php endif; ?>
 
     <div class="form-admin">
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             <div class="campo-admin">
                 <label>Título</label>
                 <input type="text" name="titulo" placeholder="Título da notícia" required>
@@ -45,8 +68,8 @@
             </div>
 
             <div class="campo-admin">
-                <label>Imagem</label>
-                <input type="text" name="imagem" placeholder="Imagem">
+                <label>Capa da Notícia</label>
+                <input type="file" name="imagem" accept=".jpg,.jpeg,.png,.gif,.webp" required>
             </div>
 
             <div class="campo-admin">

@@ -57,3 +57,41 @@ body {
     text-decoration: none;
     transition: 0.3s;
 }
+
+@media (max-width: 768px) {
+    .admin-painel {
+        padding: 90px 15px 20px 15px;
+    }
+
+    .navbar {
+        padding: 8px 15px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .menu ul li a {
+        font-size: 13px;
+    }
+
+    .cards-admin {
+        grid-template-columns: 1fr;
+    }
+
+    .tabela-admin {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .admin-topo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

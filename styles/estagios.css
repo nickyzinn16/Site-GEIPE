@@ -52,3 +52,34 @@
     color: #ffc107;
     margin-top: 5px;
 }
+
+/* ===== MOBILE (até 768px) ===== */
+@media (max-width: 768px) {
+    .etapas {
+        padding: 20px 15px;
+    }
+
+    section {
+        padding: 20px 15px;
+    }
+
+    .navbar {
+        padding: 8px 15px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .menu ul li a {
+        font-size: 13px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
