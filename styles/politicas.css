@@ -1,0 +1,30 @@
+/* caixa */
+.container-politicas {
+    flex: 1;
+    background-color: #FAFAFA;
+    padding: 20px;
+    border-left: 7px solid #FFD700;
+    border-radius: 6px;
+    transition: transform 0.4s ease;
+}
+
+/* Títulos dentro das caixas */
+.container-politicas h1 {
+    margin-bottom: 10px;
+    color: #0a2c66;
+    font-size: 26px;
+}
+
+.container-politicas h2 {
+    margin-bottom: 10px;
+    color: #0a2c66;
+    font-size: 20px;
+}
+
+/* Parágrafos dentro das caixas */
+.container-politicas p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #0a2c66;
+}
