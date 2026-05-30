@@ -25,4 +25,18 @@
     </div>
 </section>
 
+<script>
+    function pesquisar(){
+        const texto = document.querySelector('.pesquisar input').value.toLowerCase();
+        document.querySelectorAll('.noticia').forEach(n => {
+            const visivel = n.querySelector('h3').textContent.toLowerCase().includes(texto) ||
+                            n.querySelector('p').textContent.toLowerCase().includes(texto);
+            n.style.display = visivel ? 'block' : 'none';
+        });
+    }
+
+    document.querySelector('.procurar').addEventListener('click', pesquisar);
+    document.querySelector('.pesquisar input').addEventListener('keyup', e => e.key === 'Enter' && pesquisar());
+</script>
+
 <?php include 'php/footer.php'; ?>
