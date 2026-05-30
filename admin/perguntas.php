@@ -33,6 +33,7 @@
             <tr>
                 <td><?= $pergunta['pergunta'] ?></td>
                 <td>
+                    <a href="editar-pergunta.php?id=<?= $pergunta['id'] ?>" class="btn-criar">Editar</a>
                     <a href="perguntas.php?apagar=<?= $pergunta['id'] ?>" class="btn-apagar" onclick="return confirm('Tens a certeza que queres apagar esta pergunta?')">Apagar</a>
                 </td>
             </tr>

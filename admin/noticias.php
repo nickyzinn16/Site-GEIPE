@@ -35,6 +35,7 @@
                 <td><?= $noticia['titulo'] ?></td>
                 <td><?= $noticia['criado'] ?></td>
                 <td>
+                    <a href="editar-noticia.php?id=<?= $noticia['id'] ?>" class="btn-criar">Editar</a>
                     <a href="noticias.php?apagar=<?= $noticia['id'] ?>" class="btn-apagar" onclick="return confirm('Tens a certeza que queres apagar esta noticia?')">Apagar</a>
                 </td>
             </tr>
