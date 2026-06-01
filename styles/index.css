@@ -78,7 +78,7 @@
 }
 
 /* ===== MOBILE (até 768px) ===== */
-@media (max-width: 768px) {
+@media (max-width: 768px) { /*responsividade para telas menores */
     section {
         padding: 20px 15px;
     }

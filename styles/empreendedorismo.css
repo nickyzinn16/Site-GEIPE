@@ -18,7 +18,7 @@
 
 /* Estilo de cada card de empreendedorismo */
 .card {
-    flex: 1;
+    flex: 1; /*para que os cards ocupem o mesmo espaco disponível */
     min-width: 250px;
     background-color: #0a2c66;
     color: white;
@@ -30,13 +30,13 @@
     font-weight: bold;
 }
 
-/* Efeito ao passar o rato sobre os cards */
+/* Efeito ao passar o mouse sobre os cards */
 .card:hover {
     background-color: #ffc107;
     color: #0a2c66;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Estilo responsivo para telas menores */
     section {
         padding: 20px 15px;
     }

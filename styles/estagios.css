@@ -54,7 +54,7 @@
 }
 
 /* ===== MOBILE (até 768px) ===== */
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Estilo responsivo para telas menores */
     .etapas {
         padding: 20px 15px;
     }

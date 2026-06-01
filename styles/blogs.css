@@ -66,7 +66,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 1; /* Garante que o header fique acima de outros elementos */
 }
 
 /* Define espaçamento das secções */
