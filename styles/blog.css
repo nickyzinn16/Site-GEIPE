@@ -8,15 +8,15 @@
 .pesquisar {
     display: flex;
     gap: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Distncia inferior em relação as noticias */
 }
 
 /* Estilo do campo de pesquisa */
 .pesquisar input {
-    flex: 1;
+    flex: 1; /*ocupa todo o espaco disponivel*/
     padding: 10px;
     border-radius: 6px;
-    border: 1px solid lightgray;
+    border: 1px solid lightgray; /* Borda cinza clara */
 }
 
 /* Estilo do botão de pesquisa */
@@ -26,13 +26,13 @@
     background: #0a2c66;
     color: white;
     border-radius: 6px;
-    cursor: pointer;
+    cursor: pointer; /* Mostra o cursor de clique */
 }
 
 /* Grelha que organiza as notícias em colunas */
 .noticias {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Cria tres colunas de mesma largura*/
     gap: 25px;
 }
 
@@ -40,24 +40,24 @@
 .noticia {
     display: block;
     text-decoration: none;
-    color: inherit;
+    color: inherit; /*herda a cor do conteudo */
     border-radius: 10px;
     background: white;
-    overflow: hidden;
+    overflow: hidden; /* Esconde elementos que ultrapassem os limites do card */
     border: 1px solid #ddd;
     transition: 0.3s;
 }
 
 /* Efeito ao passar o rato sobre a notícia */
 .noticia:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /*efeito de elevacao */
 }
 
 /* Estilo da imagem dentro da notícia */
 .noticia img {
     width: 100%;
     height: 180px;
-    object-fit: cover;
+    object-fit: cover; /*ajusta a imagem sem deformar*/
 }
 
 /* Estilo do título da notícia */
@@ -77,15 +77,16 @@
 
 @media (max-width: 768px) {
     .blog-container {
-        padding: 90px 15px 20px 15px;
+        padding: 90px 15px 20px 15px; /* Ajusta os espacamentos do conteudo principal */
     }
 
+    /* Adaptacao da barra de navegação para ecras menores */
     .navbar {
         padding: 8px 15px;
-        flex-wrap: wrap;
+        flex-wrap: wrap;/* Permite que os elementos passem para a linha seguinte */
         gap: 8px;
     }
-
+    /* Permite que os itens do menu se reorganizem */
     .menu ul {
         flex-wrap: wrap;
         gap: 8px;
@@ -95,7 +96,7 @@
     .menu ul li a {
         font-size: 13px;
     }
-
+    /* Exibir as notícias em apenas uma coluna */
     .noticias {
         grid-template-columns: 1fr;
     }

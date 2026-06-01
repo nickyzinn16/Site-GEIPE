@@ -12,16 +12,16 @@ section {
 
 /* Mantem o cabeçalho fixo no topo da página, mesmo ao scrolar */
 .header {
-    position: fixed;
+    position: fixed; /* para garantir que o cabeçalho fique fixo no topo da página */
     width: 100%;
     top: 0;
-    z-index: 1;
+    z-index: 1;  /* serve para garantir que o cabeçalho fique acima dos outros elementos */
 }
 
 /* Estilo do menu */
 .navbar {
-    display: flex;
-    justify-content: space-between;
+    display: flex; 
+    justify-content: space-between; /* Distribuir os elementos horizontalmente */
     align-items: center;
     padding: 6px 60px;
     background-color: #0a2c66;
@@ -34,7 +34,7 @@ section {
     border-radius: 25%; 
 }
 
-/* Organiza o menu */
+/* Organiza o menu em forma de linha */
 .menu ul {
     display: flex;
     align-items: center;
@@ -65,7 +65,7 @@ section {
 
 /* Cria uma linha por baixo dos links do menu */
 .menu ul li a::after {
-    content: "";
+    content: ""; /* Cria um elemento vazio */
     position: absolute;
     width: 0%;
     height: 2px;
@@ -87,7 +87,7 @@ section {
     padding: 5px 10px;
     border-radius: 4px;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.3s; /*Adicionar uma transicao suave de 0.3 segundo */
 }
 
 /* Efeito hover do botão de login */
@@ -106,7 +106,7 @@ section {
     color: white;
     border: none;
     border-radius: 6px;
-    cursor: pointer;
+    cursor: pointer; /* Muda o cursor para indicar que aquilo e clicavel */
 }
 
 /* Estilo para os títulos h2 */
