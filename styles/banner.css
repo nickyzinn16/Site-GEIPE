@@ -6,13 +6,13 @@
     height: 55vh;
     padding: 40px 80px;
     color: lightgray;
-    margin-top: 60px;
+    margin-top: 60px;  /* Criacao de um espaço superior para evitar sobreposicao com o cabeçalho */
     background-image:
-        linear-gradient(rgba(10,44,102,0.85), rgba(10,44,102,0.85)),
-        url("../resources/images/banner-geipe2.jpg");
+        linear-gradient(rgba(10,44,102,0.85), rgba(10,44,102,0.85)),/*aplicacao de uma gradiencia semi-transparente da cor azul para escurecer a imagem */
+        url("../resources/images/banner-geipe2.jpg"); /*insercao da imagem*/
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; /**/
 }
 
 /* Define a largura máxima do conteúdo dentro do banner */
@@ -39,7 +39,7 @@
     background-color: #ffc107;
     color: #0a2c66;
     padding: 12px 28px;
-    text-decoration: none;
+    text-decoration: none; /* Remove o sublinhado padrao que vem nos links */
     font-weight: bold;
     border-radius: 6px;
     transition: 0.5s;
@@ -47,6 +47,6 @@
 
 /* Efeito hover do botão de candidatar a um estagio */
 .candidatura:hover {
-    background-color: #e0a800;
-    transform: scale(1.05);
+    background-color: #e0a800; /* Escurece a cor do botao ao passar o mouse por cima */
+    transform: scale(1.05); /* Aumenta o tamanho do botao ao passar o mouse por cima */
 }

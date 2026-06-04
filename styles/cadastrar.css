@@ -60,7 +60,7 @@ body {
     transition: 0.3s;
 }
 
-/* Efeito ao passar o rato no botão */
+/* Efeito ao passar o mouse no botão */
 .btn-entrar:hover {
     background-color: #e5ac00;
     transform: scale(1.02);
@@ -73,7 +73,7 @@ a {
     font-size: 14px;
 }
 
-/* Efeito ao passar o rato nos links */
+/* Efeito ao passar o mouse nos links */
 a:hover {
     text-decoration: underline;
 }

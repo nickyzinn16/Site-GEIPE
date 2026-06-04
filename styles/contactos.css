@@ -1,7 +1,7 @@
 /* Estilo do formulário */
 form {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;/* Organiza os campos do formulario em linha */
 }
 
 /* Área de contactos */
@@ -73,9 +73,9 @@ form {
     height: auto;
 }
 
-@media (max-width: 768px) {
-    section {
-        padding: 20px 15px;
+@media (max-width: 768px) { /* Estilo responsivo para telas menores */
+    section { 
+        padding: 20px 15px; /* Reduz o padding para telas menores */
     }
 
     .navbar {
