@@ -16,7 +16,8 @@ body {
     border: 1px solid rgba(255, 193, 7, 0.4);
     padding: 40px;
     border-radius: 15px;
-    width: 320px;
+    width: 450px;
+    height: 320px;
     text-align: center;
     color: white;
 }

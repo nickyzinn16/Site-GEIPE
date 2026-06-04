@@ -17,7 +17,7 @@
     <div class="noticias">
         <?php while($noticia = mysqli_fetch_assoc($resultado)): ?>
             <a href="blogs/noticia.php?id=<?= $noticia['id'] ?>" class="noticia">
-                <img src="./resources/images/Blogs/<?= $noticia['imagem'] ?>">
+                <img src="./<?= $noticia['imagem'] ?>">
                 <h3><?= $noticia['titulo'] ?></h3>
                 <p><?= $noticia['resumo'] ?></p>
             </a>
